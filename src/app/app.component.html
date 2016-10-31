@@ -1,3 +1,123 @@
-<h1>
-  {{title}}
-</h1>
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body class="w3-content" style="max-width:1300px">
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row">
+  <div class="w3-half w3-black w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Git-Forlio</h1>
+        <p>(portfolio)</p>
+    </div>
+    <div class="w3-padding-64">
+      <a href="#" class="w3-btn w3-btn-block w3-hover-blue-grey w3-padding-16">Home</a>
+      <a href="#work" class="w3-btn w3-btn-block w3-hover-teal w3-padding-16">My Work</a>
+      <a href="#work" class="w3-btn w3-btn-block w3-hover-dark-grey w3-padding-16">Resume</a>
+      <a href="#contact" class="w3-btn w3-btn-block w3-hover-brown w3-padding-16">Contact</a>
+    </div>
+  </div>
+  <div class="w3-half w3-teal w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-center">
+      <h1>About Me</h1>
+       <img class="w3-circle" alt="Norway" style="width:50%" src="{{user.avatar_url}}">
+      <div class="w3-left-align w3-padding-xxlarge">
+        <p class="w3-center">{{user.name}}</p>
+        <p class="w3-center">Angular2 and Ionic 2 Developer</p>
+          <div class="col-md-4 w3-center">
+             <a class="btn btn-default btn-block" target="_blank" href="{{user.html_url}}"> View Profile</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-white w3-center" style="min-height:800px" id="work">
+    <div class="w3-padding-64">
+      <h2>My GitHub Repo Projects</h2>
+      <p>Some of my latest projects.</p>
+        <ul>
+           <li *ngFor="let repo of repos" class="col-md-9">
+               <h4><a target="_blank" href="{{repo.html_url}}">{{repo.name}}</a></h4>
+                <p>{{repo.description}}</p>
+            </li>
+        </ul>
+    </div>
+    <br>
+  </div>
+  <div class="w3-half w3-white w3-container" style="min-height:400px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Resume</h2>
+      <p>A draft from my CV</p>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>Year</th>
+            <th>Position</th>
+            <th>location</th>
+          </tr>
+          <tr class="w3-white">
+            <td>2016 April-Current</td>
+            <td>Intern AngularJS,Angular2,Ionic2</td>
+            <td>mLab</td>
+          </tr>
+          <tr>
+            <td>2015 August -2016 April</td>
+            <td>Java Backend Developer</td>
+            <td>Codetribe(Mlab)</td>
+          </tr>
+          <tr class="w3-white">
+            <td>2015 April-August</td>
+            <td>Intern Technical Support </td>
+            <td>Rural Development & land Reform</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row" id="contact">
+  <div class="w3-half w3-dark-white w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Keep in Touch</h1>
+    </div>
+    <div class="w3-padding-64">
+     <p class="w3-opacity">KEEP IN TOUCH</p>
+      <p>{{user.email}}</p>
+      <p>0725851858</p>
+      <p>{{user.location}}</p>
+    </div>
+  </div>
+  <div class="w3-half w3-white w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-padding-xxlarge">
+      <h1>Contact</h1>
+     
+      <form class="w3-container w3-card-2 w3-padding-32 w3-white">
+        <div class="w3-group">
+          <label>Name</label>
+          <input class="w3-input" style="width:100%;" type="text" required>
+        </div>
+        <div class="w3-group">
+          <label>Subject</label>
+          <input class="w3-input" style="width:100%;" type="text" required>
+        </div>
+        <button type="button" class="w3-btn w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-black w3-padding-16">
+  <p>{{user.name}}<a href="http://www.w3schools.com/w3css/default.asp" target="_blank"></a></p>
+</footer>
+
+</body>
+</html>
+

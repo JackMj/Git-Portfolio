@@ -1,5 +1,30 @@
 # Gitforlio
 
+Create an Angular CLI Project like
+
+go to your terminal or cmd and follow simple steps as i show you
+
+step 1
+$new ng Gitforlio 
+
+step 2 
+$cd > Gitforlio  // change directory to root folder of project
+
+step 3 
+type
+$ npm install - to install all modules
+
+step 4 
+start coding (: happy coding
+
+step 5 
+open your text editor of choice and view src/app folder.
+
+step 6 
+ $ ng serve - to run project on localhost
+
+
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
 ## Development server
